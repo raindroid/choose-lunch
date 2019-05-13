@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&subset=chinese-simplified');
+
+*{
+    border: none;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    transition-duration: 400ms;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0;  
+    margin: 0;  
+    overflow:hidden;  
+}
+
+.no-border {
+border: none;
+}
+
+#main-container { 
+    height: calc(99% - 200px);  
+    z-index: 0; 
+    padding-left: 10%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#refresh-btn {
+    /* height: 100px; */
+    width: 100px;
+    border: none;
+}
+
+.full-screen {
+height: 100%;
+z-index: 0;
+}
+
+.highlight {
+border: red 2px solid; 
+}
+
+.col-dark {
+background: #1c1c1c;
+}
+
+.col-backgroud {
+background: #18192d;
+}
+
+.col-text {
+color: #884C3A;
+}
+.double-bounce1, .double-bounce2 {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background-color: rgb(136, 135, 135);
+opacity: 0.6;
+position: absolute;
+/* top: calc(50% - 30px); */
+/* left: calc(50% - 30px); */
+
+-webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+-webkit-animation-delay: -1.0s;
+animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+0%, 100% { -webkit-transform: scale(0.0) }
+50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+} 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+}
+}
+
+#title {
+    font-size: 2rem;
+}
+
+#version {
+    font-size: 0.9rem;
+    color: #255359;
+}
+
+#content {
+    width: 100%;
+    font-size: 3.4rem;
+    color: #E16B8C;
+    opacity: 1;
+    animation: fadeIn 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.elementToFadeInAndOut {
+    opacity: 0;
+    animation: fadeInOut 4s linear;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0 }
+    50%, 90% { opacity: 1 }
+}
+
+@keyframes fadeIn {
+    0%, 75% { 
+        opacity: 0;
+        margin-left: 10%;
+    }
+    100% { 
+        opacity: 1;
+        margin-left: 0;
+    }
+}
