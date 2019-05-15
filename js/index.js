@@ -17,9 +17,9 @@ let rests = [
         'Kinton',
         '马路边边',
         '嘿小面',
-	'大斌家串串香',
-	'小扁担鸡公煲',
-	'Mo\'Ramyun']
+        '大斌家串串香',
+        '小扁担鸡公煲',
+        'Mo\'Ramyun']
 
 let text_colors = [
     '#E16B8C',
@@ -33,6 +33,13 @@ let text_colors = [
     '#3A8FB7'
 ]
 
+let app = new Vue({
+    el: '#info-box',
+    data: {
+        time: ''
+    }
+})
+
 function onStart() {
 
     findNewFood()
@@ -40,6 +47,8 @@ function onStart() {
 }
 
 function findNewFood() {
+
+    app.time = new Date().toLocaleString()
 
     let choice = Math.floor(Math.random() * rests.length)
     let today = rests[choice]

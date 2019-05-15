@@ -10,7 +10,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+
+    
     <meta name="theme-color" content="#18192d" />
     <link rel="icon" href="./icons/food.png">
     <title>Lunch today?</title>
@@ -19,10 +21,10 @@
     <div class="container col-backgroud" id="main-container">
         <div class="row full-screen">
             <div class="align-self-center">
-                <div class="brand">
+                <div class="brand" id='info-box'>
                     <p>
                         <span class="col-text" id="title">去哪儿吃饭？</span>
-                        <span class="col-text" id="version">v0.0.11</span>
+                        <span class="col-text" id="version">v0.0.12</span>
                     </p>
                     <div class=" food-spinner elementToFadeInAndOut">
                         <div class="spinner">
@@ -36,9 +38,13 @@
                     <div name="" id="refresh-btn" class="btn btn-light" href="#" role="button" onclick="findNewFood()">
                         <i class="fas fa-retweet"></i>
                     </div>
+                    <div>
+                        <p id='timest'class="col-text">{{time}}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script src="js/index.js"></script>
 </html>
