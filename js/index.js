@@ -16,7 +16,10 @@ let rests = [
         '味千拉面',
         'Kinton',
         '马路边边',
-        '嘿小面']
+        '嘿小面',
+	'大斌家串串香',
+	'小扁担鸡公煲',
+	'Mo\'Ramyun']
 
 let text_colors = [
     '#E16B8C',
